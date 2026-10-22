@@ -50,12 +50,16 @@ export const about = {
   skills: [
     "Next.js",
     "React",
+    "React Native",
+    "Flutter",
     "Node.js",
     "TypeScript",
+    "FastAPI",
     "PostgreSQL",
     "Python",
     "Reinforcement Learning",
     "UAV Systems",
+    "Generative AI",
   ],
 };
 
@@ -72,9 +76,9 @@ export const education = [
 export const contact = {
   heading: "Let's build something meaningful.",
   text: "Open to full-stack roles, research collaborations and mentoring. The fastest way to reach me is email.",
-  email: "hello@example.com",
+  email: "ayeshakhalil432@gmail.com",
   socials: [
     { label: "LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/ayesha-khalil-435b87265/" },
-    { label: "GitHub", icon: "github", href: "https://github.com/your-handle" },
+    { label: "Preply", icon: "preply", href: "https://preply.in/AYESHA6EN20534010102?ts=17926788" },
   ],
 };

@@ -52,4 +52,13 @@ export function Star(props) {
   );
 }
 
-export const socialIcons = { linkedin: Linkedin, github: Github, mail: Mail };
+export function Cap(props) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M2 9.5 12 5l10 4.5L12 14 2 9.5Z" />
+      <path d="M6 11.5V16c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-4.5M22 9.5V15" />
+    </svg>
+  );
+}
+
+export const socialIcons = { linkedin: Linkedin, github: Github, mail: Mail, preply: Cap };

@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0d1117;
+  --surface: #151b20;
+  --surface-raised: #1b2328;
+  --text: #f3ede4;
+  --muted: #b9b1a8;
+  --green: #183b35;
+  --green-soft: #7c9b8c;
+  --green-deep: #0e2420;
+  --rose: #e6a8bc;
+  --gold: #d4af7c;
+  --line: rgba(230, 220, 207, 0.16);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-green: var(--green);
+  --color-sage: var(--green-soft);
+  --color-deep: var(--green-deep);
+  --color-rose: var(--rose);
+  --color-gold: var(--gold);
+  --color-line: var(--line);
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-nunito), Arial, sans-serif;
+  --font-script: var(--font-allura), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-nunito), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--rose);
+  color: #1a1014;
+}
+
+/* scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.6, 0.2, 1),
+    transform 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* hero image: fades into the page on the left and bottom */
+.hero-fade {
+  mask-image: linear-gradient(to right, transparent 0%, #000 46%),
+    linear-gradient(to top, transparent 0%, #000 22%);
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 46%),
+    linear-gradient(to top, transparent 0%, #000 22%);
+  -webkit-mask-composite: source-in;
+}
+@media (max-width: 1023px) {
+  .hero-fade {
+    mask-image: linear-gradient(to top, transparent 0%, #000 30%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 30%);
+  }
+}
+
+.font-display {
+  font-variant-numeric: lining-nums;
+  font-variation-settings: "SOFT" 100;
+}
+
+/* giant link underline that draws in */
+.draw-underline {
+  background: linear-gradient(currentColor, currentColor) left bottom / 0% 1px no-repeat;
+  transition: background-size 0.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.draw-underline:hover { background-size: 100% 1px; }
+
+/* about photo: every edge dissolves into the page */
+.about-fade {
+  mask-image: linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-composite: intersect;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-composite: source-in;
 }

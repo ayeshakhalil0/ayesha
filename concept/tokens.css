@@ -1,0 +1,20 @@
+:root {
+  /* Ayesha portfolio: dark editorial + Pakistani architectural warmth */
+  --color-bg: #0D1117;
+  --color-surface: #151B20;
+  --color-surface-raised: #1B2328;
+  --color-text: #F3EDE4;
+  --color-text-muted: #B9B1A8;
+  --color-green: #183B35;
+  --color-green-soft: #7C9B8C;
+  --color-rose: #E6A8BC;
+  --color-warm-gold: #D4AF7C;
+  --color-line: rgba(230, 220, 207, 0.18);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", Arial, sans-serif;
+
+  --radius-card: 18px;
+  --radius-pill: 999px;
+  --shadow-card: 0 18px 50px rgba(0, 0, 0, 0.22);
+}

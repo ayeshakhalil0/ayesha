@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { nav, site } from "@/config/site";
 import { Arrow } from "./Icons";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +34,7 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open ? "border-b border-line bg-bg/85 backdrop-blur-md" : "border-b border-transparent"
+        scrolled || open ? "border-b border-line bg-bg/85 backdrop-blur-md" : "theme-dark border-b border-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-10">
@@ -58,6 +59,8 @@ export default function Nav() {
           ))}
         </nav>
 
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
         <a
           href="#contact"
           className="hidden items-center gap-2 rounded-full border border-line px-5 py-2 text-[13px] text-text transition-colors hover:border-rose hover:text-rose lg:inline-flex"
@@ -76,6 +79,7 @@ export default function Nav() {
             {open ? <path d="M6 6l12 12M18 6 6 18" /> : <path d="M4 8h16M4 16h16" />}
           </svg>
         </button>
+        </div>
       </div>
 
       {open && (

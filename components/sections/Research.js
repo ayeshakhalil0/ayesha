@@ -8,7 +8,7 @@ import { Arrow } from "../Icons";
 export default function Research() {
   const r = research;
   return (
-    <section id="research" className="bg-deep">
+    <section id="research" className="theme-dark bg-deep">
       <div className="mx-auto max-w-7xl px-5 pt-16 md:px-10 md:pt-24">
         <Reveal>
           <Label index="04">Research</Label>

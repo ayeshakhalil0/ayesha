@@ -6,7 +6,7 @@ import { Arrow, socialIcons } from "../Icons";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden">
+    <section id="contact" className="theme-dark relative overflow-hidden bg-bg">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent_0%,#000_60%)]">
         <Image
           src={hero.image.src}

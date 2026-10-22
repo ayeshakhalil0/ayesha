@@ -14,6 +14,37 @@
   --line: rgba(230, 220, 207, 0.16);
 }
 
+/* Light theme. Hero, Research and Contact opt out with .theme-dark and keep the dark tokens. */
+[data-theme="light"] {
+  --bg: #faf6f0;
+  --surface: #f2ebe0;
+  --surface-raised: #eae1d3;
+  --text: #2b2024;
+  --muted: #6b5f58;
+  --green: #dfe9e2;
+  --green-soft: #4f7a66;
+  --green-deep: #e2ece6;
+  --rose: #c25a7c;
+  --gold: #9c7430;
+  --line: rgba(43, 32, 36, 0.14);
+  color-scheme: light;
+}
+
+.theme-dark {
+  --bg: #0d1117;
+  --surface: #151b20;
+  --surface-raised: #1b2328;
+  --text: #f3ede4;
+  --muted: #b9b1a8;
+  --green: #183b35;
+  --green-soft: #7c9b8c;
+  --green-deep: #0e2420;
+  --rose: #e6a8bc;
+  --gold: #d4af7c;
+  --line: rgba(230, 220, 207, 0.16);
+  color-scheme: dark;
+}
+
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);

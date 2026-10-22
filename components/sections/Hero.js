@@ -7,9 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="theme-dark relative overflow-hidden"
-      // dark hero that dissolves into whatever the page background is (dark or light theme)
-      style={{ background: "linear-gradient(to bottom, #0d1117 calc(100% - 64px), transparent)" }}
+      className="relative overflow-hidden bg-bg"
     >
       {/* Image: stacked on mobile, right-aligned and faded on desktop */}
       <div className="hero-fade relative aspect-[1586/992] w-full lg:absolute lg:right-0 lg:top-0 lg:w-[80%]">

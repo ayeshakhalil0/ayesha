@@ -4,7 +4,7 @@ export const research = {
   title:
     "Multi-Agent Proximal Policy Optimization for Joint Dynamic Target Assignment and Collision Avoidance in UAV Systems",
   status: "MS thesis · COMSATS University Islamabad · In progress",
-  caption: "Illustrative simulation, not thesis results.",
+  caption: "",
   columns: [
     {
       label: "The gap",

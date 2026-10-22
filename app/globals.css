@@ -14,7 +14,7 @@
   --line: rgba(230, 220, 207, 0.16);
 }
 
-/* Light theme. Hero, Research and Contact opt out with .theme-dark and keep the dark tokens. */
+/* Light theme. Research and Contact opt out with .theme-dark and keep the dark tokens. */
 [data-theme="light"] {
   --bg: #faf6f0;
   --surface: #f2ebe0;

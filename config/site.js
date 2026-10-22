@@ -26,6 +26,8 @@ export const hero = {
     "I build scalable web applications, explore intelligent systems through research, and love helping others grow in tech.",
   tagline: "A curious mind from Pakistan.",
   image: { src: "/images/ayesha.png", alt: "Ayesha working on her laptop at sunset" },
+  // Plays in place of the image; the image is the poster shown while it loads.
+  video: { src: "/images/gemini_generated_video_9fe15f9c.webm", type: "video/webm" },
   primaryCta: { label: "View my work", href: "#work" },
   secondaryCta: { label: "Explore research", href: "#research" },
 };
@@ -34,14 +36,13 @@ export const stats = [
   { value: "4+", label: "Years experience" },
   { value: "20+", label: "Projects delivered" },
   { value: "2+", label: "Years teaching" },
-  { value: "3.8/4.0", label: "MS CGPA" },
 ];
 
 export const manifesto =
   "I build web products people actually enjoy using, research how swarms of drones can *think together*, and teach the next generation of developers to *build with confidence.*";
 
 export const about = {
-  image: { src: "/images/ayesha-about.png", alt: "Ayesha sketching drone paths in a notebook at her desk, with code on her laptop and a lesson on her tablet" },
+  image: { src: "/images/ayesha-about-v2.png", alt: "avatar" },
   heading: "Rooted in culture, always *reaching for more.*",
   paragraphs: [
     "I'm a software engineer who moves between three worlds: shipping production web apps, researching how groups of autonomous agents can cooperate safely, and teaching the next batch of developers.",

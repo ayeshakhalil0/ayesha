@@ -26,8 +26,14 @@ export const hero = {
     "I build scalable web applications, explore intelligent systems through research, and love helping others grow in tech.",
   tagline: "A curious mind from Pakistan.",
   image: { src: "/images/ayesha.png", alt: "Ayesha working on her laptop at sunset" },
-  // Plays in place of the image; the image is the poster shown while it loads.
-  video: { src: "/images/gemini_generated_video_9fe15f9c.webm", type: "video/webm" },
+  // Transparent-background avatar loop. The poster is the video's own first frame on the hero's
+  // dark background, so nothing visibly changes when playback starts. `image` above is only
+  // used for the Contact section backdrop and alt text.
+  video: {
+    src: "/images/hero-avatar.webm",
+    type: "video/webm",
+    poster: "/images/hero-avatar-poster.jpg",
+  },
   primaryCta: { label: "View my work", href: "#work" },
   secondaryCta: { label: "Explore research", href: "#research" },
 };
